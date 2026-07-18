@@ -99,20 +99,28 @@ to{opacity:1;transform:translateY(0);}
 
 <div class="container">
 
-<h1>🎂 Happy Sweet 15, ca ❤️</h1>
+<h1>🎂 Happy Sweet 15, ca 🤍</h1>
 
 <h2>Diana Ichsan Pramugari ✈️</h2>
 
 <button onclick="openGift()">🎁 Open My Gift</button>
 
-<audio id= "bgMusic" sfc= "https://media1.vocaroo.com/mp3/1dfqoXJUJ2bd" loop></audio>
-<audio id="https://media1.vocaroo.com/mp3/1dfqoXJUJ2bd" loop>
-<source src="https://media1.vocaroo.com/mp3/1dfqoXJUJ2bd" type="audio/mpeg">
-</audio>
+<audio id="music" src="https://media1.vocaroo.com/mp3/1dfqoXJUJ2bd"></audio>
 
-<button onclick="document.getElementById('music').play()">
-  ▶ Putar Lagu
-</button>
+<button onclick="play()">▶ Putar Lagu</button>
+<button onclick="pause()">⏸ Pause</button>
+
+<script>
+let music = document.getElementById("music");
+
+function play(){
+  music.play();
+}
+
+function pause(){
+  music.pause();
+}
+</script>
 
 
 <div id="letter">
