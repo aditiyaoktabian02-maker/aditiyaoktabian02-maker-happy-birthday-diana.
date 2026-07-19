@@ -1,35 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Happy Birthday ❤️</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Diana ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:linear-gradient(135deg,#182848,#6a11cb);
+color:white;
+text-align:center;
+}
+
+
+.page{
+display:none;
+height:100vh;
+padding:30px;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+
+.active{
+display:flex;
+}
+
+
+h1{
+font-size:45px;
+margin-bottom:20px;
+}
+
+
+h2{
+font-weight:300;
+margin-bottom:30px;
+}
+
+
+p{
+max-width:700px;
+line-height:1.8;
+font-size:17px;
+}
+
+
+button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:17px;
+cursor:pointer;
+background:white;
+color:#6a11cb;
+}
+
+
+button:hover{
+transform:scale(1.08);
+}
+
+
+img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+margin:10px;
+}
+
+
+.star{
+position:absolute;
+animation:fall 4s linear infinite;
+}
+
+
+@keyframes fall{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<div class="container">
+
+<audio id="music" loop>
+
+<source src="AllVideo_01784375249244.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- HALAMAN 1 -->
+
+<div class="page active" id="page1">
 
 <h1>🎂 Happy Sweet 15, ca 🤍</h1>
 
 <h2>Diana Ichsan Pramugari ✈️</h2>
 
-<button onclick="playMusic(); location.href='surat.html'">
+<button onclick="nextPage(2)">
 🎁 Open My Gift
 </button>
-
-<audio id="bgMusic" loop>
-<source src="AllVideo_01784375249244.mp3" type="audio/mpeg">
-</audio>
 
 </div>
 
 
+
+<!-- HALAMAN 2 -->
+
+<div class="page" id="page2">
+
+
+<h1>💌 Untuk Diana</h1>
+
+
+<p>
+
+Selamat ulang tahun gari garbet ❤️
+
+<br><br>
+
+selamat ulang tahun, ca 🤍  
+maaf yaaa ca guaa belum bisa ngucapin langsung ataupun ngasih hadiah. 
+
+semoga di umur yang baru ini semua doa dan harapanmu satu per satu bisa terwujud. 
+
+semoga selalu diberi kesehatan, kebahagiaan, dan keberanian untuk mengejar semua impianmu.
+
+<br><br>
+
+makasih ya karena selama ini udah jadi seseorang yang selalu ada diajak cerita dan ngobrol.
+
+walaupun sekarang kita udah beda sekolah dan jarang ketemu, semoga kita tetap bisa saling support.
+
+<br><br>
+
+tetap jadi gari yang guaa kenal ya.
+
+<br><br>
+
+Happy Birthday! Semoga hari ini jadi salah satu hari terbaik buat kamu. 🎂✨❤️
+
+
+</p>
+
+
+<button onclick="nextPage(3)">
+Lihat Kenangan 📸
+</button>
+
+
+</div>
+
+
+
+
+<!-- HALAMAN 3 -->
+
+
+<div class="page" id="page3">
+
+
+<h1>📸 Kenangan</h1>
+
+
+<img src="AllVideo_01784305869474.png">
+
+<img src="foto2.jpg">
+
+
+<h2>
+✨ Happy Birthday ✨
+</h2>
+
+
+<p>
+Semoga selalu bahagia, sehat, dan semua impian kamu tercapai 🤍
+</p>
+
+
+</div>
+
+
+
 <script>
-function playMusic(){
-let music=document.getElementById("bgMusic");
+
+
+function nextPage(number){
+
+
+document.querySelectorAll(".page")
+.forEach(p=>p.classList.remove("active"));
+
+
+document.getElementById("page"+number)
+.classList.add("active");
+
+
+
+let music=document.getElementById("music");
+
+
 music.play();
+
+
+
+for(let i=0;i<50;i++){
+
+
+let star=document.createElement("div");
+
+
+star.className="star";
+
+star.innerHTML=["✨","⭐","🏀","🦋"][Math.floor(Math.random()*4)];
+
+ 
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+
+document.body.appendChild(star);
+
+
 }
+
+
+}
+
+
 </script>
+
 
 </body>
 </html>
