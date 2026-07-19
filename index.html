@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday gari garbet ca ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -40,13 +41,13 @@ z-index:2;
 }
 
 h1{
-font-size:55px;
-margin-bottom:20px;
+font-size:45px;
+margin-bottom:15px;
 animation:fade 2s;
 }
 
 h2{
-font-size:26px;
+font-size:25px;
 font-weight:300;
 margin-bottom:30px;
 animation:fade 3s;
@@ -69,10 +70,18 @@ transform:scale(1.08);
 
 #letter{
 display:none;
-margin-top:30px;
-font-size:18px;
+margin-top:25px;
+font-size:16px;
 line-height:1.8;
 animation:fade 1s;
+}
+
+.music-card{
+margin-top:25px;
+padding:15px;
+border-radius:20px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
 }
 
 .star{
@@ -82,14 +91,28 @@ animation:twinkle linear infinite;
 }
 
 @keyframes twinkle{
-0%{opacity:.2;transform:translateY(0);}
-50%{opacity:1;}
-100%{opacity:.2;transform:translateY(-15px);}
+0%{
+opacity:.2;
+transform:translateY(0);
+}
+50%{
+opacity:1;
+}
+100%{
+opacity:.2;
+transform:translateY(-15px);
+}
 }
 
 @keyframes fade{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 
@@ -103,46 +126,18 @@ to{opacity:1;transform:translateY(0);}
 
 <h2>Diana Ichsan Pramugari ✈️</h2>
 
+
 <button onclick="openGift()">🎁 Open My Gift</button>
 
+
+<audio id="bgMusic" loop>
+<source src="selfaware.mp3" type="audio/mpeg">
+</audio>
+
+
 <div class="music-card">
-  <h3>🎵 Now Playing</h3>
-
-  <iframe
-    style="border-radius:16px"
-    src="https://open.spotify.com/embed/track/4qW3BbQAwZsrnu8a3ZRdyT?utm_source=generator&theme=0"
-    width="100%"
-    height="152"
-    frameborder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-  </iframe>
+🎵 Music will play when you open the gift
 </div>
-
-<style>
-.music-card{
-    max-width:350px;
-    margin:20px auto;
-    padding:15px;
-    border-radius:20px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    box-shadow:0 8px 30px rgba(0,0,0,.3);
-}
-
-.music-card h3{
-    color:#fff;
-    text-align:center;
-    font-family:Poppins, sans-serif;
-    margin-bottom:15px;
-}
-</style>
-}
-
-
-}
-</script>
 
 
 <div id="letter">
@@ -151,16 +146,18 @@ to{opacity:1;transform:translateY(0);}
 
 Selamat ulang tahun gari garbet ❤️
 
+<br><br>
 
-
-selamat ulang tahun, ca 🤍
-maaf yaaa ca guaa belum bisa ngucapin langsung ataupun ngasih hadiah. 
-semoga di umur yang baru ini semua doa dan harapanmu satu per satu bisa terwujud. 
-semoga selalu diberi kesehatan, kebahagiaan, dan keberanian untuk mengejar semua impianmu.
-makasih ya karena selama ini udah jadi seseorang yang selalu ada diajak cerita dan ngobrol. 
-walaupun sekarang kita udah beda sekolah dan jarang ketemu, semoga kita tetap bisa saling support. 
-tetap jadi gari yang guaa kenal ya.
+selamat ulang tahun, ca 🤍  
+maaf yaaa ca guaa belum bisa ngucapin langsung ataupun ngasih hadiah.  
+semoga di umur yang baru ini semua doa dan harapanmu satu per satu bisa terwujud.  
+semoga selalu diberi kesehatan, kebahagiaan, dan keberanian untuk mengejar semua impianmu.  
+makasih ya karena selama ini udah jadi seseorang yang selalu ada diajak cerita dan ngobrol.  
+walaupun sekarang kita udah beda sekolah dan jarang ketemu, semoga kita tetap bisa saling support.  
+tetap jadi gari yang guaa kenal ya.  
 Happy Birthday! Semoga hari ini jadi salah satu hari terbaik buat kamu. 🎂✨❤️
+
+<br><br>
 
 ✨ Happy Birthday ✨
 
@@ -170,11 +167,18 @@ Happy Birthday! Semoga hari ini jadi salah satu hari terbaik buat kamu. 🎂✨�
 
 </div>
 
+
 <script>
 
 function openGift(){
 
 document.getElementById("letter").style.display="block";
+
+
+let music=document.getElementById("bgMusic");
+
+music.play();
+
 
 for(let i=0;i<80;i++){
 
@@ -182,7 +186,9 @@ let s=document.createElement("div");
 
 s.className="star";
 
-s.innerHTML=["✨","⭐","🏀","🦋","🌸"][Math.floor(Math.random()*5)];
+s.innerHTML=["✨","⭐","🏀","🦋","🌸"]
+[Math.floor(Math.random()*5)];
+
 
 s.style.left=Math.random()*100+"vw";
 
@@ -192,6 +198,7 @@ s.style.fontSize=(10+Math.random()*25)+"px";
 
 s.style.animationDuration=(2+Math.random()*4)+"s";
 
+
 document.body.appendChild(s);
 
 }
@@ -199,6 +206,7 @@ document.body.appendChild(s);
 }
 
 </script>
+
 
 </body>
 </html>
