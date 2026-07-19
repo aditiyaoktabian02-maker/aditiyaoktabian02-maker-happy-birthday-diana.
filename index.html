@@ -105,22 +105,42 @@ to{opacity:1;transform:translateY(0);}
 
 <button onclick="openGift()">🎁 Open My Gift</button>
 
-<audio controls>
-  <source src="https://voca.ro/1dfqoXJUJ2bd" type="audio/mpeg">
-</audio>
+<div class="music-card">
+  <h3>🎵 Now Playing</h3>
 
-<button onclick="play()">▶ Putar Lagu</button>
-<button onclick="pause()">⏸ Pause</button>
+  <iframe
+    style="border-radius:16px"
+    src="https://open.spotify.com/embed/track/4qW3BbQAwZsrnu8a3ZRdyT?utm_source=generator&theme=0"
+    width="100%"
+    height="152"
+    frameborder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
 
-<script>
-let music = document.getElementById("music");
-
-function play(){
-  music.play();
+<style>
+.music-card{
+    max-width:350px;
+    margin:20px auto;
+    padding:15px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 30px rgba(0,0,0,.3);
 }
 
-function pause(){
-  music.pause();
+.music-card h3{
+    color:#fff;
+    text-align:center;
+    font-family:Poppins, sans-serif;
+    margin-bottom:15px;
+}
+</style>
+}
+
+
 }
 </script>
 
