@@ -1,121 +1,8 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday gari garbet ca ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-height:100vh;
-overflow:hidden;
-background:linear-gradient(135deg,#182848,#4b6cb7,#6a11cb);
-background-size:300% 300%;
-animation:bgMove 10s infinite alternate;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-}
-
-@keyframes bgMove{
-0%{background-position:left;}
-100%{background-position:right;}
-}
-
-.container{
-padding:30px;
-max-width:700px;
-z-index:2;
-}
-
-h1{
-font-size:45px;
-margin-bottom:15px;
-animation:fade 2s;
-}
-
-h2{
-font-size:25px;
-font-weight:300;
-margin-bottom:30px;
-animation:fade 3s;
-}
-
-button{
-padding:15px 35px;
-border:none;
-border-radius:50px;
-font-size:18px;
-cursor:pointer;
-background:white;
-color:#4b6cb7;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-#letter{
-display:none;
-margin-top:25px;
-font-size:16px;
-line-height:1.8;
-animation:fade 1s;
-}
-
-.music-card{
-margin-top:25px;
-padding:15px;
-border-radius:20px;
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(10px);
-}
-
-.star{
-position:absolute;
-color:white;
-animation:twinkle linear infinite;
-}
-
-@keyframes twinkle{
-0%{
-opacity:.2;
-transform:translateY(0);
-}
-50%{
-opacity:1;
-}
-100%{
-opacity:.2;
-transform:translateY(-15px);
-}
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-</style>
-
+<title>Happy Birthday ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -126,87 +13,23 @@ transform:translateY(0);
 
 <h2>Diana Ichsan Pramugari ✈️</h2>
 
-
-<button onclick="openGift()">🎁 Open My Gift</button>
-
+<button onclick="playMusic(); location.href='surat.html'">
+🎁 Open My Gift
+</button>
 
 <audio id="bgMusic" loop>
 <source src="AllVideo_01784375249244.mp3" type="audio/mpeg">
 </audio>
 
-
-<div class="music-card">
-🎵 Music will play when you open the gift
-</div>
-
-
-<div id="letter">
-
-<p>
-
-Selamat ulang tahun gari garbet ❤️
-
-<br><br>
-
-selamat ulang tahun, ca 🤍  
-maaf yaaa ca guaa belum bisa ngucapin langsung ataupun ngasih hadiah.  
-semoga di umur yang baru ini semua doa dan harapanmu satu per satu bisa terwujud.  
-semoga selalu diberi kesehatan, kebahagiaan, dan keberanian untuk mengejar semua impianmu.  
-makasih ya karena selama ini udah jadi seseorang yang selalu ada diajak cerita dan ngobrol.  
-walaupun sekarang kita udah beda sekolah dan jarang ketemu, semoga kita tetap bisa saling support.  
-tetap jadi gari yang guaa kenal ya.  
-Happy Birthday! Semoga hari ini jadi salah satu hari terbaik buat kamu. 🎂✨❤️
-
-<br><br>
-
-✨ Happy Birthday ✨
-
-</p>
-
-</div>
-
 </div>
 
 
 <script>
-
-function openGift(){
-
-document.getElementById("letter").style.display="block";
-
-
+function playMusic(){
 let music=document.getElementById("bgMusic");
-
 music.play();
-
-
-for(let i=0;i<80;i++){
-
-let s=document.createElement("div");
-
-s.className="star";
-
-s.innerHTML=["✨","⭐","🏀","🦋","🌸"]
-[Math.floor(Math.random()*5)];
-
-
-s.style.left=Math.random()*100+"vw";
-
-s.style.top=Math.random()*100+"vh";
-
-s.style.fontSize=(10+Math.random()*25)+"px";
-
-s.style.animationDuration=(2+Math.random()*4)+"s";
-
-
-document.body.appendChild(s);
-
 }
-
-}
-
 </script>
-
 
 </body>
 </html>
